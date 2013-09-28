@@ -5,91 +5,142 @@
  * metadata-driven class system features 
  */
 Ext.Loader.addClassPathMappings({
+  "Deft.Component": "packages/deft/src/js/event/LiveEventBus.js",
+  "Deft.InjectableComponent": "packages/deft/src/js/ioc/Injector.js",
   " Ext.Msg": "ext/src/window/MessageBox.js",
   "Ext": "ext/src",
   "BasketballDashboard.Application": "app/application.js",
   "Ext.rtl.EventObjectImpl": "ext/src/rtl/EventObject.js",
-  "BasketballDashboard": "app"
+  "BasketballDashboard": "app",
+  "Deft": "packages/deft/src/js"
 });
 Ext.ClassManager.addNameAlternateMappings({
+  "Deft.ioc.Injector": [
+    "Deft.Injector"
+  ],
   "Ext.ux.BoxReorderer": [],
   "Ext.ux.grid.filter.Filter": [],
   "Ext.ux.GroupTabRenderer": [],
-  "Ext.ux.ajax.DataSimlet": [],
+  "Deft.core.Class": [
+    "Deft.Class"
+  ],
   "Ext.ux.grid.TransformGrid": [],
-  "BasketballDashboard.controller.Main": [],
+  "Ext.ux.ajax.DataSimlet": [],
   "BasketballDashboard.view.Viewport": [],
+  "BasketballDashboard.controller.Main": [],
   "Ext.ux.FieldReplicator": [],
+  "Deft.event.LiveEventBus": [
+    "Deft.LiveEventBus"
+  ],
+  "Deft.mixin.Injectable": [],
   "Ext.ux.grid.filter.ListFilter": [],
   "Ext.ux.ajax.XmlSimlet": [],
   "Ext.ux.event.Driver": [],
   "Ext.ux.dd.PanelFieldDragZone": [],
   "Ext.ux.DataView.DragSelector": [],
+  "Deft.mvc.Observer": [],
   "BasketballDashboard.view.Main": [],
   "Ext.ux.grid.menu.ListMenu": [],
   "Ext.ux.GMapPanel": [],
+  "Deft.mvc.ViewController": [
+    "Deft.ViewController"
+  ],
   "Ext.ux.form.MultiSelect": [
     "Ext.ux.Multiselect"
   ],
-  "Ext.ux.DataView.LabelEditor": [],
+  "Deft.promise.Resolver": [
+    "Deft.Resolver"
+  ],
+  "Deft.util.Function": [
+    "Deft.Function"
+  ],
   "Ext.ux.GroupTabPanel": [],
+  "Ext.ux.DataView.LabelEditor": [],
   "Ext.ux.grid.filter.StringFilter": [],
   "Ext.ux.statusbar.ValidationStatus": [],
   "Ext.ux.layout.Center": [],
+  "Deft.promise.Chain": [
+    "Deft.Chain"
+  ],
+  "Deft.InjectableComponent": [],
   "Ext.ux.PreviewPlugin": [],
   "Ext.ux.DataView.Animated": [],
   "Ext.ux.ajax.SimXhr": [],
   "Ext.ux.event.RecorderManager": [],
   "Ext.ux.ProgressBarPager": [],
   "Ext.ux.CellDragDrop": [],
+  "Deft.Component": [],
   "Ext.ux.statusbar.StatusBar": [
     "Ext.ux.StatusBar"
   ],
   "Ext.ux.ajax.Simlet": [],
+  "Deft.mvc.ComponentSelectorListener": [],
   "Ext.ux.SlidingPager": [],
   "Ext.ux.TabReorderer": [],
+  "Deft.mixin.Controllable": [],
   "Ext.ux.grid.filter.NumericFilter": [],
   "Ext.ux.grid.menu.RangeMenu": [],
   "Ext.ux.RowExpander": [],
   "Ext.ux.event.Recorder": [],
   "Ext.ux.event.Player": [],
+  "Deft.event.LiveEventListener": [
+    "Deft.LiveEventListener"
+  ],
   "Ext.ux.ajax.SimManager": [],
   "BasketballDashboard.Application": [],
   "Ext.ux.grid.filter.BooleanFilter": [],
   "Ext.ux.ToolbarDroppable": [],
   "Ext.ux.event.Maker": [],
   "Ext.ux.TabScrollerMenu": [],
+  "Deft.mvc.ComponentSelector": [],
   "Ext.ux.IFrame": [],
   "Ext.ux.DataView.Draggable": [],
+  "Deft.log.Logger": [
+    "Deft.Logger"
+  ],
   "Ext.ux.TabCloseMenu": [],
+  "Deft.ioc.DependencyProvider": [],
   "Ext.ux.form.SearchField": [],
+  "Deft.promise.Promise": [
+    "Deft.Promise"
+  ],
   "Ext.ux.dd.CellFieldDropZone": [],
   "Ext.ux.LiveSearchGridPanel": [],
-  "Ext.ux.DataTip": [],
   "Ext.ux.grid.filter.DateFilter": [],
+  "Ext.ux.DataTip": [],
   "Ext.ux.grid.filter.DateTimeFilter": [],
   "Ext.ux.TreePicker": [],
   "Ext.ux.form.ItemSelector": [
     "Ext.ux.ItemSelector"
   ],
   "Ext.ux.ajax.JsonSimlet": [],
+  "Deft.mvc.Application": [
+    "Deft.Application"
+  ],
   "Ext.ux.Spotlight": [],
   "Ext.ux.grid.FiltersFeature": [],
+  "Deft.promise.Deferred": [
+    "Deft.Deferred"
+  ],
   "Ext.ux.data.PagingMemoryProxy": [
     "Ext.data.PagingMemoryProxy"
   ]
 });
 Ext.ClassManager.addNameAliasMappings({
+  "Deft.ioc.Injector": [],
   "Ext.ux.BoxReorderer": [],
   "Ext.ux.grid.filter.Filter": [],
   "Ext.ux.GroupTabRenderer": [
     "plugin.grouptabrenderer"
   ],
-  "Ext.ux.ajax.DataSimlet": [],
+  "Deft.core.Class": [],
   "Ext.ux.grid.TransformGrid": [],
-  "BasketballDashboard.controller.Main": [],
+  "Ext.ux.ajax.DataSimlet": [],
   "BasketballDashboard.view.Viewport": [],
+  "BasketballDashboard.controller.Main": [],
   "Ext.ux.FieldReplicator": [],
+  "Deft.event.LiveEventBus": [],
+  "Deft.mixin.Injectable": [],
   "Ext.ux.grid.filter.ListFilter": [
     "gridfilter.list"
   ],
@@ -99,6 +150,7 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.ux.event.Driver": [],
   "Ext.ux.dd.PanelFieldDragZone": [],
   "Ext.ux.DataView.DragSelector": [],
+  "Deft.mvc.Observer": [],
   "BasketballDashboard.view.Main": [
     "widget.app-main"
   ],
@@ -106,14 +158,17 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.ux.GMapPanel": [
     "widget.gmappanel"
   ],
+  "Deft.mvc.ViewController": [],
   "Ext.ux.form.MultiSelect": [
     "widget.multiselect",
     "widget.multiselectfield"
   ],
-  "Ext.ux.DataView.LabelEditor": [],
+  "Deft.promise.Resolver": [],
+  "Deft.util.Function": [],
   "Ext.ux.GroupTabPanel": [
     "widget.grouptabpanel"
   ],
+  "Ext.ux.DataView.LabelEditor": [],
   "Ext.ux.grid.filter.StringFilter": [
     "gridfilter.string"
   ],
@@ -121,6 +176,8 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.ux.layout.Center": [
     "layout.ux.center"
   ],
+  "Deft.promise.Chain": [],
+  "Deft.InjectableComponent": [],
   "Ext.ux.PreviewPlugin": [
     "plugin.preview"
   ],
@@ -133,14 +190,17 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.ux.CellDragDrop": [
     "plugin.celldragdrop"
   ],
+  "Deft.Component": [],
   "Ext.ux.statusbar.StatusBar": [
     "widget.statusbar"
   ],
   "Ext.ux.ajax.Simlet": [
     "simlet.basic"
   ],
+  "Deft.mvc.ComponentSelectorListener": [],
   "Ext.ux.SlidingPager": [],
   "Ext.ux.TabReorderer": [],
+  "Deft.mixin.Controllable": [],
   "Ext.ux.grid.filter.NumericFilter": [
     "gridfilter.numeric"
   ],
@@ -148,6 +208,7 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.ux.RowExpander": [],
   "Ext.ux.event.Recorder": [],
   "Ext.ux.event.Player": [],
+  "Deft.event.LiveEventListener": [],
   "Ext.ux.ajax.SimManager": [],
   "BasketballDashboard.Application": [],
   "Ext.ux.grid.filter.BooleanFilter": [
@@ -158,23 +219,27 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.ux.TabScrollerMenu": [
     "plugin.tabscrollermenu"
   ],
+  "Deft.mvc.ComponentSelector": [],
   "Ext.ux.IFrame": [
     "widget.uxiframe"
   ],
   "Ext.ux.DataView.Draggable": [],
+  "Deft.log.Logger": [],
   "Ext.ux.TabCloseMenu": [
     "plugin.tabclosemenu"
   ],
+  "Deft.ioc.DependencyProvider": [],
   "Ext.ux.form.SearchField": [
     "widget.searchfield"
   ],
+  "Deft.promise.Promise": [],
   "Ext.ux.dd.CellFieldDropZone": [],
   "Ext.ux.LiveSearchGridPanel": [],
-  "Ext.ux.DataTip": [
-    "plugin.datatip"
-  ],
   "Ext.ux.grid.filter.DateFilter": [
     "gridfilter.date"
+  ],
+  "Ext.ux.DataTip": [
+    "plugin.datatip"
   ],
   "Ext.ux.grid.filter.DateTimeFilter": [
     "gridfilter.datetime"
@@ -189,10 +254,12 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.ux.ajax.JsonSimlet": [
     "simlet.json"
   ],
+  "Deft.mvc.Application": [],
   "Ext.ux.Spotlight": [],
   "Ext.ux.grid.FiltersFeature": [
     "feature.filters"
   ],
+  "Deft.promise.Deferred": [],
   "Ext.ux.data.PagingMemoryProxy": [
     "proxy.pagingmemory"
   ]

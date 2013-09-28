@@ -7,10 +7,16 @@
 // DO NOT DELETE - this directive is required for Sencha Cmd packages to work.
 //@require @packageOverrides
 
-Ext.application({
-    name: 'BasketballDashboard',
-
-    extend: 'BasketballDashboard.Application',
-    
-    autoCreateViewport: true
+// Configure Loader paths
+Ext.Loader.setConfig({
+    enabled: true,
+    paths: {
+//        "DeftQuickStart": "app",
+//        "Ext": "/../../../sencha/ext-4.2.1.883/src"
+    }
 });
+
+Ext.syncRequire(["Ext.Component", "Ext.ComponentManager", "Ext.ComponentQuery"]);
+
+Ext.syncRequire(["BasketballDashboard.Application"]);
+Ext.create("BasketballDashboard.Application");

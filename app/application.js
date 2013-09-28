@@ -1,17 +1,18 @@
 Ext.define('BasketballDashboard.Application', {
-    name: 'BasketballDashboard',
 
-    extend: 'Ext.app.Application',
-
-    views: [
-        // TODO: add views here
+    extend: 'Deft.mvc.Application',
+    requires: [
+        'Deft.mixin.Controllable',
+        'Deft.mixin.Injectable',
+        'BasketballDashboard.Viewport'
     ],
 
-    controllers: [
-        // TODO: add controllers here
-    ],
+    init: function() {
 
-    stores: [
-        // TODO: add stores here
-    ]
+        Deft.Injector.configure({});
+
+        Ext.tip.QuickTipManager.init();
+        Ext.create('BasketballDashboard.Viewport');
+    }
+
 });

@@ -2,6 +2,7 @@
     "name": "BasketballDashboard",
 
     "requires": [
+        "deft@0.9.0"
     ],
 
     "id": "b722fcc0-51d8-4c0f-a7f6-dbc96560e840"
