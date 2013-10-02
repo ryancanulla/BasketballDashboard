@@ -4,12 +4,16 @@ Ext.define('BasketballDashboard.Application', {
     requires: [
         'Deft.mixin.Controllable',
         'Deft.mixin.Injectable',
-        'BasketballDashboard.Viewport'
+        'BasketballDashboard.Viewport',
+        'BasketballDashboard.store.GameStore'
     ],
 
     init: function() {
 
-        Deft.Injector.configure({});
+        Deft.Injector.configure({
+            gameStore: 'BasketballDashboard.store.GameStore',
+            controlsService: 'BasketballDashboard.ui.controls.ControlsService'
+        });
 
         Ext.tip.QuickTipManager.init();
         Ext.create('BasketballDashboard.Viewport');
