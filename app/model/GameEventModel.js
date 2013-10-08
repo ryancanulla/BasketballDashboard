@@ -1,4 +1,4 @@
-Ext.define('DeftQuickStart.dashboard.GameEventModel', {
+Ext.define('BasketballDashboard.model.GameEventModel', {
     extend: 'Ext.data.Model',
     fields: [
         {name:'id', type: 'int'},

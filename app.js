@@ -9,14 +9,16 @@
 
 // Configure Loader paths
 Ext.Loader.setConfig({
-    enabled: true,
-    paths: {
-//        "DeftQuickStart": "app",
-//        "Ext": "/../../../sencha/ext-4.2.1.883/src"
-    }
+    enabled: true
 });
 
-Ext.syncRequire(["Ext.Component", "Ext.ComponentManager", "Ext.ComponentQuery"]);
+Ext.syncRequire([
+    "Ext.Component",
+    "Ext.ComponentManager",
+    "Ext.ComponentQuery",
+    'BasketballDashboard.Application'
+]);
 
-Ext.syncRequire(["BasketballDashboard.Application"]);
-Ext.create("BasketballDashboard.Application");
+Ext.onReady(function () {
+    Ext.create("BasketballDashboard.Application");
+});

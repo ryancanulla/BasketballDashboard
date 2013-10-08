@@ -5,10 +5,12 @@ Ext.define( "BasketballDashboard.ui.controls.ControlsView", {
     controller: "BasketballDashboard.ui.controls.ControlsController",
     border: false,
 
+    requires:['Ext.slider.Single'],
+
     layout: {
         type: 'vbox',
-        align:'center',
-        defaultMargins: {top: 0, right: 20, bottom: 5, left: 20}
+        align:'stretch',
+        defaultMargins: {top: 20, right: 20, bottom: 20, left: 20}
     },
 
     initComponent: function() {
@@ -22,8 +24,9 @@ Ext.define( "BasketballDashboard.ui.controls.ControlsView", {
                     value: 200,
                     minValue: 1,
                     maxValue: 459,
-                    useTips:true,
-                    minWidth:10,
+                    useTips:false,
+                    maxHeight: 20,
+                    border:false,
 
                     style: {
                         backgroundImage: 'url(http://docs.sencha.com/extjs/4.2.1/extjs-build/examples/slider/images/ticks.gif)',
