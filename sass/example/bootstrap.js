@@ -17,6 +17,7 @@ Ext.Loader.addClassPathMappings({
 });
 Ext.ClassManager.addNameAlternateMappings({
   "BasketballDashboard.Application": [],
+  "BasketballDashboard.Const": [],
   "BasketballDashboard.Viewport": [],
   "BasketballDashboard.model.GameEventModel": [],
   "BasketballDashboard.store.GameStore": [],
@@ -911,6 +912,7 @@ Ext.ClassManager.addNameAlternateMappings({
 });
 Ext.ClassManager.addNameAliasMappings({
   "BasketballDashboard.Application": [],
+  "BasketballDashboard.Const": [],
   "BasketballDashboard.Viewport": [],
   "BasketballDashboard.model.GameEventModel": [],
   "BasketballDashboard.store.GameStore": [],

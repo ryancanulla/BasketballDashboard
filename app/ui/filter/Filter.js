@@ -21,7 +21,7 @@ Ext.define( "BasketballDashboard.ui.filter.Filter", {
                     minValue: 1,
                     maxValue: 459,
                     useTips:false,
-                    height:20,
+                    maxHeight: 20,
 
                     style: {
                         backgroundImage: 'url(http://docs.sencha.com/extjs/4.2.1/extjs-build/examples/slider/images/ticks.gif)'

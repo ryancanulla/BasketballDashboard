@@ -10,57 +10,40 @@ Ext.define("BasketballDashboard.ui.score.ScoreController", {
     },
 
     control: {
-        homeTeamLogo: true,
-        homeTeamScore: true,
-        awayTeamLogo: true,
-        awayTeamScore: true,
-        timeRemainingDisplay:true,
-        quarterDisplay:true,
-        h1:true,
-        h2:true,
-        h3:true,
-        h4:true,
-        h5:true,
-        a1:true,
-        a2:true,
-        a3:true,
-        a4:true,
-        a5:true
+        scoreLabel:true,
+        teamLogo:true
     },
 
     init: function() {
         this.callParent(arguments);
         this.updateDisplay();
-
-        this.getHomeTeamLogo().getEl().dom.src = 'resources/images/teamLogos/Boston.jpg';
-        this.getAwayTeamLogo().getEl().dom.src = 'resources/images/teamLogos/Miami.jpg';
+        this.updateLogo();
     },
 
     updateDisplay:function() {
         this.updateScore();
-        this.updateTime();
-        this.updateQuarter();
-        this.updateCurrentLineups();
+    },
 
-        this.getView().doLayout();
+    updateLogo:function() {
+        var url;
+        if(this.getView().homeTeam) {
+            url = 'resources/images/teamLogos/Boston.jpg';
+        }
+        else {
+            url = 'resources/images/teamLogos/Miami.jpg';
+        }
+        this.getTeamLogo().setSrc(url);
     },
 
     updateScore: function() {
-        var homeScore = this.scoreService.getCurrentScore().home,
-            awayScore = this.scoreService.getCurrentScore().away;
-
-        this.getHomeTeamScore().getEl().dom.innerText = homeScore;
-        this.getAwayTeamScore().getEl().dom.innerText = awayScore;
-    },
-
-    updateTime:function() {
-        var timeRemaining = this.scoreService.getTimeRemaining();
-
-        this.getTimeRemainingDisplay().getEl().dom.innerText = timeRemaining;
-    },
-
-    updateQuarter:function() {
-        this.getQuarterDisplay().getEl().dom.innerText = this.scoreService.getCurrentQuarter();
+        var score;
+        if(this.getView().homeTeam) {
+            score = this.scoreService.getCurrentScore().home;
+        }
+        else {
+            score = this.scoreService.getCurrentScore().away;
+        }
+        this.getScoreLabel().setText(score);
     },
 
     updateCurrentLineups: function() {

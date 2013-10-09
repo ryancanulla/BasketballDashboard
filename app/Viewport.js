@@ -23,10 +23,25 @@ Ext.define("BasketballDashboard.Viewport", {
 
                     items: [
                         {
-                            xtype: 'score'
+                            xtype: 'container',
+                            layout: { type: 'hbox', align: 'stretch' },
+                            flex: 1,
+                            items: [
+                                {
+                                    xtype: 'score',
+                                    homeTeam: true,
+                                    flex:1
+                                },
+                                {
+                                    xtype: 'score',
+                                    homeTeam: false,
+                                    flex:1
+                                }
+                            ]
                         },
                         {
-                            xtype: 'filter'
+                            xtype: 'filter',
+                            flex: 3
                         }
                     ]
                 }

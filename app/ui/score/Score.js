@@ -2,18 +2,27 @@ Ext.define( "BasketballDashboard.ui.score.Score", {
     extend: "Ext.container.Container",
     alias: 'widget.score',
 
-//    controller: "BasketballDashboard.ui.score.ScoreController",
+    controller: "BasketballDashboard.ui.score.ScoreController",
 
     initComponent: function() {
         Ext.applyIf(this, {
+            cls: 'scoreView',
+
             layout: {
                 type: 'hbox',
-                align: 'top'
+                align: 'middle',
+                pack:'center'
             },
 
             items: [
                 {
-                    html: 'test'
+                    xtype: 'image',
+                    itemId: 'teamLogo'
+                },
+                {
+                    xtype: 'label',
+                    itemId: 'scoreLabel',
+                    cls:'scoreLabel'
                 }
             ]
 
