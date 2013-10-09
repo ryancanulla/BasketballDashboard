@@ -28,11 +28,11 @@ Ext.ClassManager.addNameAlternateMappings({
   "BasketballDashboard.ui.score.Score": [],
   "BasketballDashboard.ui.score.ScoreController": [],
   "BasketballDashboard.ui.score.ScoreService": [],
-  "BasketballDashboard.ui.shots.ShotsConst": [],
-  "BasketballDashboard.ui.shots.ShotsController": [],
-  "BasketballDashboard.ui.shots.ShotsModel": [],
-  "BasketballDashboard.ui.shots.ShotsService": [],
-  "BasketballDashboard.ui.shots.ShotsView": [],
+  "BasketballDashboard.ui.shooting.Shooting": [],
+  "BasketballDashboard.ui.shooting.ShootingConst": [],
+  "BasketballDashboard.ui.shooting.ShootingController": [],
+  "BasketballDashboard.ui.shooting.ShootingModel": [],
+  "BasketballDashboard.ui.shooting.ShootingService": [],
   "Deft.Component": [],
   "Deft.InjectableComponent": [],
   "Deft.core.Class": [
@@ -929,13 +929,13 @@ Ext.ClassManager.addNameAliasMappings({
   ],
   "BasketballDashboard.ui.score.ScoreController": [],
   "BasketballDashboard.ui.score.ScoreService": [],
-  "BasketballDashboard.ui.shots.ShotsConst": [],
-  "BasketballDashboard.ui.shots.ShotsController": [],
-  "BasketballDashboard.ui.shots.ShotsModel": [],
-  "BasketballDashboard.ui.shots.ShotsService": [],
-  "BasketballDashboard.ui.shots.ShotsView": [
-    "widget.madeshots"
+  "BasketballDashboard.ui.shooting.Shooting": [
+    "widget.shooting"
   ],
+  "BasketballDashboard.ui.shooting.ShootingConst": [],
+  "BasketballDashboard.ui.shooting.ShootingController": [],
+  "BasketballDashboard.ui.shooting.ShootingModel": [],
+  "BasketballDashboard.ui.shooting.ShootingService": [],
   "Deft.Component": [],
   "Deft.InjectableComponent": [],
   "Deft.core.Class": [],

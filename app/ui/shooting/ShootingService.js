@@ -1,10 +1,10 @@
-Ext.define('BasketballDashboard.ui.shots.ShotsService', {
+Ext.define('BasketballDashboard.ui.shooting.ShootingService', {
     mixins: { observable: 'Ext.util.Observable' },
 
     inject:['gameStore'],
     requires: [
         'Ext.data.JsonStore',
-        'BasketballDashboard.ui.shots.ShotsModel'
+        'BasketballDashboard.ui.shooting.ShootingModel'
     ],
 
     UPDATED:'updatedEvent',
@@ -49,14 +49,14 @@ Ext.define('BasketballDashboard.ui.shots.ShotsService', {
                     var newPlayer = {
                         name:record.get('player'),
                         shots: Ext.create('Ext.data.JsonStore', {
-                            model:'BasketballDashboard.ui.shots.ShotsModel'
+                            model:'BasketballDashboard.ui.shooting.ShootingModel'
                         })
                     };
 
                     player = roster.add(newPlayer)[0];
                 }
 
-                shot = Ext.create('BasketballDashboard.ui.shots.ShotsModel', {
+                shot = Ext.create('BasketballDashboard.ui.shooting.ShootingModel', {
                     player: record.get('player'),
                     type: record.get('type'),
                     points: record.get('points'),

@@ -10,6 +10,7 @@ Ext.define( "BasketballDashboard.ui.filter.Filter", {
             layout: {
                 type: 'vbox',
                 align: 'stretch',
+                pack: 'center',
                 defaultMargins: {top: 0, right: 20, bottom: 5, left: 20}
             },
             items: [

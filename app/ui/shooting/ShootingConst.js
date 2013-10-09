@@ -1,4 +1,4 @@
-Ext.define("BasketballDashboard.ui.shots.ShotsConst", {
+Ext.define("BasketballDashboard.ui.shooting.ShootingConst", {
 
     singleton : true,
 

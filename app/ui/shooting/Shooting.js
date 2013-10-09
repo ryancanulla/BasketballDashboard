@@ -1,12 +1,12 @@
-Ext.define( "BasketballDashboard.ui.shots.ShotsView", {
+Ext.define( "BasketballDashboard.ui.shooting.Shooting", {
     extend: "Ext.container.Container",
-    alias: 'widget.madeshots',
+    alias: 'widget.shooting',
 
     requires: [
         'Ext.chart.Chart'
     ],
 
-    controller: "BasketballDashboard.ui.shots.ShotsController",
+    controller: "BasketballDashboard.ui.shooting.ShootingController",
 
     legendPosition:'left',
     border: false,

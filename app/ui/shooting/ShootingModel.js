@@ -1,4 +1,4 @@
-Ext.define('BasketballDashboard.ui.shots.ShotsModel', {
+Ext.define('BasketballDashboard.ui.shooting.ShootingModel', {
     extend: 'Ext.data.Model',
     fields: [
         {name:'player', type: 'string'},

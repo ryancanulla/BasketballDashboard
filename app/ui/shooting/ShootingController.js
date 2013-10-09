@@ -1,15 +1,15 @@
-Ext.define("BasketballDashboard.ui.shots.ShotsController", {
+Ext.define("BasketballDashboard.ui.shooting.ShootingController", {
     extend: "Deft.mvc.ViewController",
 
     requires: [
         'Ext.chart.series.Pie',
-        'BasketballDashboard.ui.shots.ShotsConst'
+        'BasketballDashboard.ui.shooting.ShootingConst'
     ],
 
-    inject:['shotsService'],
+    inject:['shootingService'],
 
     observe: {
-        shotsService: {
+        shootingService: {
             updatedEvent: 'updateStore'
         }
     },
@@ -56,19 +56,19 @@ Ext.define("BasketballDashboard.ui.shots.ShotsController", {
     },
 
     showRosterByPoints:function() {
-        this.updateChart(BasketballDashboard.ui.shots.ShotsConst.POINTS);
+        this.updateChart(BasketballDashboard.ui.shooting.ShootingConst.POINTS);
     },
 
     showRosterByTotalShots:function() {
-        this.updateChart(BasketballDashboard.ui.shots.ShotsConst.TOTAL_SHOTS);
+        this.updateChart(BasketballDashboard.ui.shooting.ShootingConst.TOTAL_SHOTS);
     },
 
     showRosterByMadeShots: function() {
-        this.updateChart(BasketballDashboard.ui.shots.ShotsConst.MADE_SHOTS);
+        this.updateChart(BasketballDashboard.ui.shooting.ShootingConst.MADE_SHOTS);
     },
 
     showRosterByMissedShots: function() {
-        this.updateChart(BasketballDashboard.ui.shots.ShotsConst.MISSED_SHOTS);
+        this.updateChart(BasketballDashboard.ui.shooting.ShootingConst.MISSED_SHOTS);
     },
 
     updateChart:function(newField) {
@@ -112,16 +112,16 @@ Ext.define("BasketballDashboard.ui.shots.ShotsController", {
         var result='';
 
         switch(field) {
-            case BasketballDashboard.ui.shots.ShotsConst.POINTS:
+            case BasketballDashboard.ui.shooting.ShootingConst.POINTS:
                 result = ' points';
                 break;
-            case BasketballDashboard.ui.shots.ShotsConst.TOTAL_SHOTS:
+            case BasketballDashboard.ui.shooting.ShootingConst.TOTAL_SHOTS:
                 result = ' attempts';
                 break;
-            case BasketballDashboard.ui.shots.ShotsConst.MADE_SHOTS:
+            case BasketballDashboard.ui.shooting.ShootingConst.MADE_SHOTS:
                 result = ' baskets';
                 break;
-            case BasketballDashboard.ui.shots.ShotsConst.MISSED_SHOTS:
+            case BasketballDashboard.ui.shooting.ShootingConst.MISSED_SHOTS:
                 result = ' misses';
                 break;
         }
@@ -129,7 +129,7 @@ Ext.define("BasketballDashboard.ui.shots.ShotsController", {
     },
 
     showPlayerShotData:function(event) {
-        var newStore = this.shotsService.getPlayerShotData(this.team, event.storeItem.get('name'));
+        var newStore = this.shootingService.getPlayerShotData(this.team, event.storeItem.get('name'));
         this.getTopShootersChart().bindStore(newStore);
 
         this.updateChart('total', true);
@@ -137,10 +137,10 @@ Ext.define("BasketballDashboard.ui.shots.ShotsController", {
     },
 
     showRosterShotData:function(event) {
-        var newStore = this.shotsService.getRosterShotData(this.team);
+        var newStore = this.shootingService.getRosterShotData(this.team);
         this.getTopShootersChart().bindStore(newStore);
 
-        this.updateChart(BasketballDashboard.ui.shots.ShotsConst.POINTS);
+        this.updateChart(BasketballDashboard.ui.shooting.ShootingConst.POINTS);
         this.showRosterLevelButtons();
     }
 });

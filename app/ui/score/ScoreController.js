@@ -1,6 +1,7 @@
 Ext.define("BasketballDashboard.ui.score.ScoreController", {
     extend: "Deft.mvc.ViewController",
 
+    requires: ['BasketballDashboard.ui.score.ScoreService'],
     inject:['scoreService'],
 
     observe: {
