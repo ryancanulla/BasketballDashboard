@@ -6,15 +6,76 @@
  */
 Ext.Loader.addClassPathMappings({
   "BasketballDashboard": "app",
+  "BasketballDashboard.Application": "app/application.js",
+  "Deft": "packages/deft/src/js",
+  "Deft.Component": "packages/deft/src/js/event/LiveEventBus.js",
+  "Deft.InjectableComponent": "packages/deft/src/js/ioc/Injector.js",
   "Ext": "ext/src",
   "Ext.Msg": "ext/src/window/MessageBox.js",
-  "Ext.rtl.EventObjectImpl": "ext/src/rtl/EventObject.js"
+  "Ext.rtl.EventObjectImpl": "ext/src/rtl/EventObject.js",
+  "ExtThemeNeptune": "ext/packages/ext-theme-neptune/overrides"
 });
 Ext.ClassManager.addNameAlternateMappings({
   "BasketballDashboard.Application": [],
-  "BasketballDashboard.controller.Main": [],
-  "BasketballDashboard.view.Main": [],
-  "BasketballDashboard.view.Viewport": [],
+  "BasketballDashboard.Viewport": [],
+  "BasketballDashboard.model.GameEventModel": [],
+  "BasketballDashboard.store.GameStore": [],
+  "BasketballDashboard.ui.filter.Filter": [],
+  "BasketballDashboard.ui.filter.FilterController": [],
+  "BasketballDashboard.ui.filter.FilterService": [],
+  "BasketballDashboard.ui.header.HeaderView": [],
+  "BasketballDashboard.ui.score.Score": [],
+  "BasketballDashboard.ui.score.ScoreController": [],
+  "BasketballDashboard.ui.score.ScoreService": [],
+  "BasketballDashboard.ui.shots.ShotsConst": [],
+  "BasketballDashboard.ui.shots.ShotsController": [],
+  "BasketballDashboard.ui.shots.ShotsModel": [],
+  "BasketballDashboard.ui.shots.ShotsService": [],
+  "BasketballDashboard.ui.shots.ShotsView": [],
+  "Deft.Component": [],
+  "Deft.InjectableComponent": [],
+  "Deft.core.Class": [
+    "Deft.Class"
+  ],
+  "Deft.event.LiveEventBus": [
+    "Deft.LiveEventBus"
+  ],
+  "Deft.event.LiveEventListener": [
+    "Deft.LiveEventListener"
+  ],
+  "Deft.ioc.DependencyProvider": [],
+  "Deft.ioc.Injector": [
+    "Deft.Injector"
+  ],
+  "Deft.log.Logger": [
+    "Deft.Logger"
+  ],
+  "Deft.mixin.Controllable": [],
+  "Deft.mixin.Injectable": [],
+  "Deft.mvc.Application": [
+    "Deft.Application"
+  ],
+  "Deft.mvc.ComponentSelector": [],
+  "Deft.mvc.ComponentSelectorListener": [],
+  "Deft.mvc.Observer": [],
+  "Deft.mvc.ViewController": [
+    "Deft.ViewController"
+  ],
+  "Deft.promise.Chain": [
+    "Deft.Chain"
+  ],
+  "Deft.promise.Deferred": [
+    "Deft.Deferred"
+  ],
+  "Deft.promise.Promise": [
+    "Deft.Promise"
+  ],
+  "Deft.promise.Resolver": [
+    "Deft.Resolver"
+  ],
+  "Deft.util.Function": [
+    "Deft.Function"
+  ],
   "Ext.AbstractComponent": [],
   "Ext.AbstractManager": [],
   "Ext.AbstractPlugin": [],
@@ -830,15 +891,69 @@ Ext.ClassManager.addNameAlternateMappings({
   "Ext.window.MessageBox": [],
   "Ext.window.Window": [
     "Ext.Window"
-  ]
+  ],
+  "ExtThemeNeptune.Component": [],
+  "ExtThemeNeptune.container.ButtonGroup": [],
+  "ExtThemeNeptune.form.field.HtmlEditor": [],
+  "ExtThemeNeptune.grid.RowEditor": [],
+  "ExtThemeNeptune.grid.column.RowNumberer": [],
+  "ExtThemeNeptune.layout.component.Dock": [],
+  "ExtThemeNeptune.menu.Menu": [],
+  "ExtThemeNeptune.menu.Separator": [],
+  "ExtThemeNeptune.panel.Panel": [],
+  "ExtThemeNeptune.panel.Table": [],
+  "ExtThemeNeptune.panel.Tool": [],
+  "ExtThemeNeptune.picker.Month": [],
+  "ExtThemeNeptune.resizer.Splitter": [],
+  "ExtThemeNeptune.tab.Tab": [],
+  "ExtThemeNeptune.toolbar.Paging": [],
+  "ExtThemeNeptune.toolbar.Toolbar": []
 });
 Ext.ClassManager.addNameAliasMappings({
   "BasketballDashboard.Application": [],
-  "BasketballDashboard.controller.Main": [],
-  "BasketballDashboard.view.Main": [
-    "widget.app-main"
+  "BasketballDashboard.Viewport": [],
+  "BasketballDashboard.model.GameEventModel": [],
+  "BasketballDashboard.store.GameStore": [],
+  "BasketballDashboard.ui.filter.Filter": [
+    "widget.filter"
   ],
-  "BasketballDashboard.view.Viewport": [],
+  "BasketballDashboard.ui.filter.FilterController": [],
+  "BasketballDashboard.ui.filter.FilterService": [],
+  "BasketballDashboard.ui.header.HeaderView": [
+    "widget.appHeader"
+  ],
+  "BasketballDashboard.ui.score.Score": [
+    "widget.score"
+  ],
+  "BasketballDashboard.ui.score.ScoreController": [],
+  "BasketballDashboard.ui.score.ScoreService": [],
+  "BasketballDashboard.ui.shots.ShotsConst": [],
+  "BasketballDashboard.ui.shots.ShotsController": [],
+  "BasketballDashboard.ui.shots.ShotsModel": [],
+  "BasketballDashboard.ui.shots.ShotsService": [],
+  "BasketballDashboard.ui.shots.ShotsView": [
+    "widget.madeshots"
+  ],
+  "Deft.Component": [],
+  "Deft.InjectableComponent": [],
+  "Deft.core.Class": [],
+  "Deft.event.LiveEventBus": [],
+  "Deft.event.LiveEventListener": [],
+  "Deft.ioc.DependencyProvider": [],
+  "Deft.ioc.Injector": [],
+  "Deft.log.Logger": [],
+  "Deft.mixin.Controllable": [],
+  "Deft.mixin.Injectable": [],
+  "Deft.mvc.Application": [],
+  "Deft.mvc.ComponentSelector": [],
+  "Deft.mvc.ComponentSelectorListener": [],
+  "Deft.mvc.Observer": [],
+  "Deft.mvc.ViewController": [],
+  "Deft.promise.Chain": [],
+  "Deft.promise.Deferred": [],
+  "Deft.promise.Promise": [],
+  "Deft.promise.Resolver": [],
+  "Deft.util.Function": [],
   "Ext.AbstractComponent": [],
   "Ext.AbstractManager": [],
   "Ext.AbstractPlugin": [],
@@ -1822,11 +1937,44 @@ Ext.ClassManager.addNameAliasMappings({
   ],
   "Ext.window.Window": [
     "widget.window"
-  ]
+  ],
+  "ExtThemeNeptune.Component": [],
+  "ExtThemeNeptune.container.ButtonGroup": [],
+  "ExtThemeNeptune.form.field.HtmlEditor": [],
+  "ExtThemeNeptune.grid.RowEditor": [],
+  "ExtThemeNeptune.grid.column.RowNumberer": [],
+  "ExtThemeNeptune.layout.component.Dock": [],
+  "ExtThemeNeptune.menu.Menu": [],
+  "ExtThemeNeptune.menu.Separator": [],
+  "ExtThemeNeptune.panel.Panel": [],
+  "ExtThemeNeptune.panel.Table": [],
+  "ExtThemeNeptune.panel.Tool": [],
+  "ExtThemeNeptune.picker.Month": [],
+  "ExtThemeNeptune.resizer.Splitter": [],
+  "ExtThemeNeptune.tab.Tab": [],
+  "ExtThemeNeptune.toolbar.Paging": [],
+  "ExtThemeNeptune.toolbar.Toolbar": []
 });
+Ext.setVersion("deft", "0.9.0");
 Ext.setVersion("ext-theme-base", "4.2.1");
-Ext.setVersion("ext-theme-classic", "4.2.1");
+Ext.setVersion("ext-theme-neptune", "4.2.1");
 Ext.setVersion("ext-theme-neutral", "4.2.1");
+Ext.Loader.loadScript("ext/packages/ext-theme-neptune/overrides/Component.js");;
+Ext.Loader.loadScript("ext/packages/ext-theme-neptune/overrides/panel/Panel.js");;
+Ext.Loader.loadScript("ext/packages/ext-theme-neptune/overrides/toolbar/Toolbar.js");;
+Ext.Loader.loadScript("ext/packages/ext-theme-neptune/overrides/layout/component/Dock.js");;
+Ext.Loader.loadScript("ext/packages/ext-theme-neptune/overrides/container/ButtonGroup.js");;
+Ext.Loader.loadScript("ext/packages/ext-theme-neptune/overrides/toolbar/Paging.js");;
+Ext.Loader.loadScript("ext/packages/ext-theme-neptune/overrides/picker/Month.js");;
+Ext.Loader.loadScript("ext/packages/ext-theme-neptune/overrides/form/field/HtmlEditor.js");;
+Ext.Loader.loadScript("ext/packages/ext-theme-neptune/overrides/panel/Table.js");;
+Ext.Loader.loadScript("ext/packages/ext-theme-neptune/overrides/grid/RowEditor.js");;
+Ext.Loader.loadScript("ext/packages/ext-theme-neptune/overrides/grid/column/RowNumberer.js");;
+Ext.Loader.loadScript("ext/packages/ext-theme-neptune/overrides/resizer/Splitter.js");;
+Ext.Loader.loadScript("ext/packages/ext-theme-neptune/overrides/menu/Menu.js");;
+Ext.Loader.loadScript("ext/packages/ext-theme-neptune/overrides/menu/Separator.js");;
+Ext.Loader.loadScript("ext/packages/ext-theme-neptune/overrides/panel/Tool.js");;
+Ext.Loader.loadScript("ext/packages/ext-theme-neptune/overrides/tab/Tab.js");;
 /**
  * Sencha Blink - Development
  * @author Jacky Nguyen <jacky@sencha.com>
