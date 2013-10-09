@@ -23,7 +23,13 @@ Ext.ClassManager.addNameAlternateMappings({
   "BasketballDashboard.ui.controls.ControlsController": [],
   "BasketballDashboard.ui.controls.ControlsService": [],
   "BasketballDashboard.ui.controls.ControlsView": [],
+  "BasketballDashboard.ui.filter.Filter": [],
+  "BasketballDashboard.ui.filter.FilterController": [],
+  "BasketballDashboard.ui.filter.FilterService": [],
   "BasketballDashboard.ui.header.HeaderView": [],
+  "BasketballDashboard.ui.score.Score": [],
+  "BasketballDashboard.ui.score.ScoreController": [],
+  "BasketballDashboard.ui.score.ScoreService": [],
   "BasketballDashboard.ui.shots.ShotsConst": [],
   "BasketballDashboard.ui.shots.ShotsController": [],
   "BasketballDashboard.ui.shots.ShotsModel": [],
@@ -916,9 +922,19 @@ Ext.ClassManager.addNameAliasMappings({
   "BasketballDashboard.ui.controls.ControlsView": [
     "widget.userControls"
   ],
+  "BasketballDashboard.ui.filter.Filter": [
+    "widget.filter"
+  ],
+  "BasketballDashboard.ui.filter.FilterController": [],
+  "BasketballDashboard.ui.filter.FilterService": [],
   "BasketballDashboard.ui.header.HeaderView": [
     "widget.appHeader"
   ],
+  "BasketballDashboard.ui.score.Score": [
+    "widget.score"
+  ],
+  "BasketballDashboard.ui.score.ScoreController": [],
+  "BasketballDashboard.ui.score.ScoreService": [],
   "BasketballDashboard.ui.shots.ShotsConst": [],
   "BasketballDashboard.ui.shots.ShotsController": [],
   "BasketballDashboard.ui.shots.ShotsModel": [],

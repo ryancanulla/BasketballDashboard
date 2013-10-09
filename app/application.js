@@ -4,25 +4,19 @@ Ext.define('BasketballDashboard.Application', {
     requires: [
         'Deft.mixin.Controllable',
         'Deft.mixin.Injectable',
-        'BasketballDashboard.Viewport',
-        'BasketballDashboard.store.GameStore',
-        'BasketballDashboard.ui.controls.ControlsService',
-        'BasketballDashboard.ui.shots.ShotsService'
+        'BasketballDashboard.Viewport'
     ],
 
     init: function() {
 
         Deft.Injector.configure({
-            gameStore: 'BasketballDashboard.store.GameStore',
-            controlsService: 'BasketballDashboard.ui.controls.ControlsService',
-            shotsService: 'BasketballDashboard.ui.shots.ShotsService'
+            gameStore:'BasketballDashboard.store.GameStore',
+            filterService: 'BasketballDashboard.ui.filter.FilterService',
+            scoreService: 'BasketballDashboard.ui.score.ScoreService'
         });
 
         Ext.tip.QuickTipManager.init();
         Ext.create('BasketballDashboard.Viewport');
     }
-
-
-
 
 });
