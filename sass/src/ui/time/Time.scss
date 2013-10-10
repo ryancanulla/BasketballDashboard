@@ -1,0 +1,22 @@
+.timeView {
+    .timeLabel {
+        font-size: 48px;
+        font-weight: bold;
+        border: solid 1px #b4b4b4;
+        background-color: #fcfcfc;
+        border-radius: 10px;
+    }
+
+    .quarterLabel {
+        font-size: 13px;
+        font-weight: bold;
+    }
+
+    .foulLabel {
+        font-size: 10px;
+    }
+
+    .timeoutLabel {
+        font-size: 10px;
+    }
+}

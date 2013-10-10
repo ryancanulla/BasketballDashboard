@@ -9,8 +9,8 @@ Ext.define( "BasketballDashboard.ui.score.Score", {
             cls: 'scoreView',
 
             layout: {
-                type: 'hbox',
-                align: 'middle',
+                type: 'vbox',
+                align: 'center',
                 pack:'center'
             },
 

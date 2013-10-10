@@ -9,30 +9,16 @@ Ext.define("BasketballDashboard.ui.shooting.ShootingController", {
     inject:['shootingService'],
 
     observe: {
-        shootingService: {
-            updatedEvent: 'updateStore'
-        }
+        shootingService: { updatedEvent: 'updateStore' }
     },
 
     control: {
-        topShootersChart: {
-            chartItemClick: 'showPlayerShotData'
-        },
-        backButton: {
-            click: 'showRosterShotData'
-        },
-        pointsButton:{
-            click: 'showRosterByPoints'
-        },
-        totalShotsButton:{
-            click: 'showRosterByTotalShots'
-        },
-        madeShotsButton: {
-            click: 'showRosterByMadeShots'
-        },
-        missedShotsButton: {
-            click: 'showRosterByMissedShots'
-        }
+        topShootersChart: { chartItemClick: 'showPlayerShotData' },
+        backButton: { click: 'showRosterShotData' },
+        pointsButton:{ click: 'showRosterByPoints' },
+        totalShotsButton:{ click: 'showRosterByTotalShots' },
+        madeShotsButton: { click: 'showRosterByMadeShots' },
+        missedShotsButton: { click: 'showRosterByMissedShots' }
     },
 
     team:null,

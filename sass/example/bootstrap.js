@@ -33,6 +33,9 @@ Ext.ClassManager.addNameAlternateMappings({
   "BasketballDashboard.ui.shooting.ShootingController": [],
   "BasketballDashboard.ui.shooting.ShootingModel": [],
   "BasketballDashboard.ui.shooting.ShootingService": [],
+  "BasketballDashboard.ui.time.Time": [],
+  "BasketballDashboard.ui.time.TimeController": [],
+  "BasketballDashboard.ui.time.TimeService": [],
   "Deft.Component": [],
   "Deft.InjectableComponent": [],
   "Deft.core.Class": [
@@ -930,12 +933,17 @@ Ext.ClassManager.addNameAliasMappings({
   "BasketballDashboard.ui.score.ScoreController": [],
   "BasketballDashboard.ui.score.ScoreService": [],
   "BasketballDashboard.ui.shooting.Shooting": [
-    "widget.madeshots"
+    "widget.shooting"
   ],
   "BasketballDashboard.ui.shooting.ShootingConst": [],
   "BasketballDashboard.ui.shooting.ShootingController": [],
   "BasketballDashboard.ui.shooting.ShootingModel": [],
   "BasketballDashboard.ui.shooting.ShootingService": [],
+  "BasketballDashboard.ui.time.Time": [
+    "widget.time"
+  ],
+  "BasketballDashboard.ui.time.TimeController": [],
+  "BasketballDashboard.ui.time.TimeService": [],
   "Deft.Component": [],
   "Deft.InjectableComponent": [],
   "Deft.core.Class": [],
