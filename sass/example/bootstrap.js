@@ -25,6 +25,9 @@ Ext.ClassManager.addNameAlternateMappings({
   "BasketballDashboard.ui.filter.FilterController": [],
   "BasketballDashboard.ui.filter.FilterService": [],
   "BasketballDashboard.ui.header.HeaderView": [],
+  "BasketballDashboard.ui.roster.Roster": [],
+  "BasketballDashboard.ui.roster.RosterController": [],
+  "BasketballDashboard.ui.roster.RosterService": [],
   "BasketballDashboard.ui.score.Score": [],
   "BasketballDashboard.ui.score.ScoreController": [],
   "BasketballDashboard.ui.score.ScoreService": [],
@@ -927,6 +930,11 @@ Ext.ClassManager.addNameAliasMappings({
   "BasketballDashboard.ui.header.HeaderView": [
     "widget.appHeader"
   ],
+  "BasketballDashboard.ui.roster.Roster": [
+    "widget.roster"
+  ],
+  "BasketballDashboard.ui.roster.RosterController": [],
+  "BasketballDashboard.ui.roster.RosterService": [],
   "BasketballDashboard.ui.score.Score": [
     "widget.score"
   ],

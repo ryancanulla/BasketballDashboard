@@ -37,10 +37,11 @@ Ext.define('BasketballDashboard.ui.shooting.ShootingService', {
                     {name: 'shots', type:'auto'}
                 ]
             }),
-            shot;
+            player, shot;
+
 
         this.gameStore.each(function(record) {
-            var player;
+            player;
 
             if(record.data.etype === 'shot' && record.data.team === team) {
                 player = roster.findRecord('name', record.get('player'));

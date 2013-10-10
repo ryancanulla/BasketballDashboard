@@ -64,18 +64,42 @@ Ext.define('BasketballDashboard.ui.time.TimeService', {
 
     getTimeouts: function() {
         var timeouts = {
-            home: { regular:6, short:1 },
-            away : { regular:6, short:1 }
-        };
+                home: {
+                    regular: 0,
+                    short: 0
+                },
+                away : {
+                    regular: 0,
+                    short: 0
+                }
+            };
+//            period;
 
         this.gameStore.each(function(record) {
+            period = record.get('period');
+
+            switch(period) {
+                case 1:
+                case 2:
+                    // is the first half
+                    break;
+                case 3:
+                case 4:
+                    // is the second half
+                    break;
+                case 5:
+                    // is overtime
+                    break;
+            }
+
             if (record.get('etype') === 'timeout') {
+                // is the second half
+
+                // is overtime
 
                 if (record.get('team') === 'BOS') {
-                    this._handleTimeouts(record, timeouts.home);
                 }
                 else {
-                    this._handleTimeouts(record, timeouts.away);
                 }
 
             }
@@ -84,14 +108,26 @@ Ext.define('BasketballDashboard.ui.time.TimeService', {
         return timeouts;
     },
 
-    _handleTimeouts: function(record, team) {
-        var period = record.get('period');
+    _calculateFirstHalfTimeouts: function() {
 
-        if(record.get('type') === 'regular') {
-            team.regular -= 1;
-        }
-        else {
-            team.short -= 1;
-        }
+    },
+
+    _calculateSecondHalfTimeouts: function() {
+
+    },
+
+    _calculateOvertimeTimeouts: function() {
+
     }
+
+//    _handleTimeouts: function(record, team) {
+//        var period = record.get('period');
+//
+//        if(record.get('type') === 'regular') {
+//            team.regular -= 1;
+//        }
+//        else {
+//            team.short -= 1;
+//        }
+//    }
 });

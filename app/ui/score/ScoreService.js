@@ -61,35 +61,6 @@ Ext.define('BasketballDashboard.ui.score.ScoreService', {
         }
     },
 
-    getTimeRemaining:function() {
-        var gameEvent = this.gameStore.last(),
-            result = '15:00';
-
-        if(gameEvent) {
-            result = gameEvent.data.time;
-        }
-
-        return result;
-    },
-
-    getCurrentQuarter:function() {
-        var gameEvent = this.gameStore.last(),
-            quarter,
-            result = 'QUARTER: ';
-
-        if(gameEvent) {
-            quarter = gameEvent.data.period;
-            if(quarter === 5) {
-                result = 'OVERTIME';
-            }
-            else {
-                result += quarter;
-            }
-        }
-
-        return result;
-    },
-
     getCurrentLineup: function() {
         var gameEvent = this.gameStore.last(),
             currentLineup = {

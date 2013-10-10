@@ -3,7 +3,8 @@ Ext.define("BasketballDashboard.Viewport", {
     requires: [
         'BasketballDashboard.ui.filter.Filter',
         'BasketballDashboard.ui.score.Score',
-        'BasketballDashboard.ui.time.Time'
+        'BasketballDashboard.ui.time.Time',
+        'BasketballDashboard.ui.roster.Roster'
     ],
 
     homeColors: ['#008853',	'#e9d342',	'#aa4641',	'#dedede',	'#fab587'],
@@ -32,9 +33,9 @@ Ext.define("BasketballDashboard.Viewport", {
                             flex: 2,
                             items: [
                                 {
-                                    xtype: 'container',
-                                    html: 'homeTeam',
-                                    flex:2
+                                    xtype: 'roster',
+                                    homeTeam: true,
+                                    flex:3
                                 },
                                 {
                                     xtype: 'score',
@@ -51,9 +52,9 @@ Ext.define("BasketballDashboard.Viewport", {
                                     flex:1
                                 },
                                 {
-                                    xtype: 'container',
-                                    html: 'homeTeam',
-                                    flex:2
+                                    xtype: 'roster',
+                                    homeTeam: true,
+                                    flex:3
                                 }
                             ]
                         },
