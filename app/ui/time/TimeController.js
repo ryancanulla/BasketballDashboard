@@ -31,6 +31,6 @@ Ext.define("BasketballDashboard.ui.time.TimeController", {
         timeouts = this.timeService.getTimeouts();
 
         this.getFoulLabel().setText(fouls.home + ' TEAM FOULS ' + fouls.away);
-        this.getTimeoutLabel().setText(timeouts.home.regular + '-' + timeouts.home.short + ' TIME OUTS ' + timeouts.away.regular + '-' + timeouts.away.short);
+//        this.getTimeoutLabel().setText(timeouts.home.regular + '-' + timeouts.home.short + ' TIME OUTS ' + timeouts.away.regular + '-' + timeouts.away.short);
     }
 });

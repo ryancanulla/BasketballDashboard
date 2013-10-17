@@ -4,7 +4,8 @@ Ext.define("BasketballDashboard.Viewport", {
         'BasketballDashboard.ui.filter.Filter',
         'BasketballDashboard.ui.score.Score',
         'BasketballDashboard.ui.time.Time',
-        'BasketballDashboard.ui.roster.Roster'
+        'BasketballDashboard.ui.roster.Roster',
+        'BasketballDashboard.ui.court.Court'
     ],
 
     homeColors: ['#008853',	'#e9d342',	'#aa4641',	'#dedede',	'#fab587'],
@@ -38,29 +39,42 @@ Ext.define("BasketballDashboard.Viewport", {
                                     flex:3
                                 },
                                 {
-                                    xtype: 'score',
-                                    homeTeam: true,
-                                    flex:1
-                                },
-                                {
-                                    xtype: 'time',
-                                    flex: 2
-                                },
-                                {
-                                    xtype: 'score',
-                                    homeTeam: false,
-                                    flex:1
+                                    xtype: 'container',
+                                    layout: { type: 'vbox', align: 'stretch' },
+                                    minWidth: 350,
+                                    items: [
+                                        {
+                                            xtype: 'container',
+                                            layout: { type: 'hbox', align: 'stretch' },
+                                            items: [
+                                                {
+                                                    xtype: 'score',
+                                                    homeTeam: true,
+                                                    flex:1
+                                                },
+                                                {
+                                                    xtype: 'time',
+                                                    flex: 2
+                                                },
+                                                {
+                                                    xtype: 'score',
+                                                    homeTeam: false,
+                                                    flex:1
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            xtype: 'filter',
+                                            flex: 1
+                                        }
+                                    ]
                                 },
                                 {
                                     xtype: 'roster',
-                                    homeTeam: true,
+                                    homeTeam: false,
                                     flex:3
                                 }
                             ]
-                        },
-                        {
-                            xtype: 'filter',
-                            flex: 1
                         },
                         {
                             xtype: 'container',
@@ -68,19 +82,29 @@ Ext.define("BasketballDashboard.Viewport", {
                             flex: 4,
                             items: [
                                 {
-                                    xtype: 'shooting',
-                                    team: 'BOS',
-                                    legendPosition:'right',
-                                    colorSet: this.homeColors,
+                                    xtype:'court',
+                                    homeTeam: true,
                                     flex:1
                                 },
                                 {
-                                    xtype: 'shooting',
-                                    team: 'BOS',
-                                    legendPosition:'right',
-                                    colorSet: this.awayColors,
+                                    xtype:'court',
+                                    homeTeam: false,
                                     flex:1
                                 }
+//                                {
+//                                    xtype: 'shooting',
+//                                    team: 'BOS',
+//                                    legendPosition:'right',
+//                                    colorSet: this.homeColors,
+//                                    flex:1
+//                                },
+//                                {
+//                                    xtype: 'shooting',
+//                                    team: 'BOS',
+//                                    legendPosition:'right',
+//                                    colorSet: this.awayColors,
+//                                    flex:1
+//                                }
                             ]
                         }
                     ]

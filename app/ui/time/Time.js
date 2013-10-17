@@ -23,7 +23,8 @@ Ext.define( "BasketballDashboard.ui.time.Time", {
                     itemId: 'timeLabel',
                     cls: 'timeLabel',
                     padding: 10,
-                    margin: 10
+                    margin: 10,
+                    minWidth: 146
                 },
                 {
                     xtype: 'label',

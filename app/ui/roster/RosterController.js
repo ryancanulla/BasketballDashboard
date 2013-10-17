@@ -19,7 +19,15 @@ Ext.define("BasketballDashboard.ui.roster.RosterController", {
     },
 
     updateDisplay:function() {
-        var newStore = this.rosterService.getRosterData().homeTeam;
+        var newStore;
+
+        if(this.getView().homeTeam) {
+            newStore= this.rosterService.getCurrentLineupSnapshot().homeTeam;
+        }
+        else {
+            newStore= this.rosterService.getCurrentLineupSnapshot().awayTeam;
+        }
+
         this.getView().reconfigure(newStore);
     }
 });

@@ -19,14 +19,19 @@ Ext.ClassManager.addNameAlternateMappings({
   "BasketballDashboard.Application": [],
   "BasketballDashboard.Const": [],
   "BasketballDashboard.Viewport": [],
+  "BasketballDashboard.Visualization": [],
   "BasketballDashboard.model.GameEventModel": [],
   "BasketballDashboard.store.GameStore": [],
+  "BasketballDashboard.ui.court.Court": [],
+  "BasketballDashboard.ui.court.CourtController": [],
+  "BasketballDashboard.ui.court.CourtService": [],
   "BasketballDashboard.ui.filter.Filter": [],
   "BasketballDashboard.ui.filter.FilterController": [],
   "BasketballDashboard.ui.filter.FilterService": [],
   "BasketballDashboard.ui.header.HeaderView": [],
   "BasketballDashboard.ui.roster.Roster": [],
   "BasketballDashboard.ui.roster.RosterController": [],
+  "BasketballDashboard.ui.roster.RosterModel": [],
   "BasketballDashboard.ui.roster.RosterService": [],
   "BasketballDashboard.ui.score.Score": [],
   "BasketballDashboard.ui.score.ScoreController": [],
@@ -920,8 +925,16 @@ Ext.ClassManager.addNameAliasMappings({
   "BasketballDashboard.Application": [],
   "BasketballDashboard.Const": [],
   "BasketballDashboard.Viewport": [],
+  "BasketballDashboard.Visualization": [
+    "widget.d3"
+  ],
   "BasketballDashboard.model.GameEventModel": [],
   "BasketballDashboard.store.GameStore": [],
+  "BasketballDashboard.ui.court.Court": [
+    "widget.court"
+  ],
+  "BasketballDashboard.ui.court.CourtController": [],
+  "BasketballDashboard.ui.court.CourtService": [],
   "BasketballDashboard.ui.filter.Filter": [
     "widget.filter"
   ],
@@ -934,6 +947,7 @@ Ext.ClassManager.addNameAliasMappings({
     "widget.roster"
   ],
   "BasketballDashboard.ui.roster.RosterController": [],
+  "BasketballDashboard.ui.roster.RosterModel": [],
   "BasketballDashboard.ui.roster.RosterService": [],
   "BasketballDashboard.ui.score.Score": [
     "widget.score"

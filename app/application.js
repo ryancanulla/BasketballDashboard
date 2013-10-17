@@ -10,7 +10,8 @@ Ext.define('BasketballDashboard.Application', {
         'BasketballDashboard.ui.score.ScoreService',
         'BasketballDashboard.ui.shooting.ShootingService',
         'BasketballDashboard.ui.time.TimeService',
-        'BasketballDashboard.ui.roster.RosterService'
+        'BasketballDashboard.ui.roster.RosterService',
+        'BasketballDashboard.ui.court.CourtService'
     ],
 
     init: function() {
@@ -21,7 +22,8 @@ Ext.define('BasketballDashboard.Application', {
             scoreService: 'BasketballDashboard.ui.score.ScoreService',
             shootingService: 'BasketballDashboard.ui.shooting.ShootingService',
             timeService: 'BasketballDashboard.ui.time.TimeService',
-            rosterService: 'BasketballDashboard.ui.roster.RosterService'
+            rosterService: 'BasketballDashboard.ui.roster.RosterService',
+            courtService: 'BasketballDashboard.ui.court.CourtService'
         });
 
         Ext.tip.QuickTipManager.init();

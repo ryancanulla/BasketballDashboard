@@ -63,49 +63,49 @@ Ext.define('BasketballDashboard.ui.time.TimeService', {
     },
 
     getTimeouts: function() {
-        var timeouts = {
-                home: {
-                    regular: 0,
-                    short: 0
-                },
-                away : {
-                    regular: 0,
-                    short: 0
-                }
-            };
+//        var timeouts = {
+//                home: {
+//                    regular: 0,
+//                    short: 0
+//                },
+//                away : {
+//                    regular: 0,
+//                    short: 0
+//                }
+//            };
 //            period;
 
-        this.gameStore.each(function(record) {
-            period = record.get('period');
+//        this.gameStore.each(function(record) {
+//            period = record.get('period');
+//
+//            switch(period) {
+//                case 1:
+//                case 2:
+//                    // is the first half
+//                    break;
+//                case 3:
+//                case 4:
+//                    // is the second half
+//                    break;
+//                case 5:
+//                    // is overtime
+//                    break;
+//            }
+//
+//            if (record.get('etype') === 'timeout') {
+//                // is the second half
+//
+//                // is overtime
+//
+//                if (record.get('team') === 'BOS') {
+//                }
+//                else {
+//                }
+//
+//            }
+//        }, this);
 
-            switch(period) {
-                case 1:
-                case 2:
-                    // is the first half
-                    break;
-                case 3:
-                case 4:
-                    // is the second half
-                    break;
-                case 5:
-                    // is overtime
-                    break;
-            }
-
-            if (record.get('etype') === 'timeout') {
-                // is the second half
-
-                // is overtime
-
-                if (record.get('team') === 'BOS') {
-                }
-                else {
-                }
-
-            }
-        }, this);
-
-        return timeouts;
+//        return timeouts;
     },
 
     _calculateFirstHalfTimeouts: function() {
