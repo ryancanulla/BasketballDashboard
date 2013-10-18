@@ -11,7 +11,7 @@ Ext.define( "BasketballDashboard.ui.court.Court", {
     initComponent: function() {
         Ext.applyIf(this, {
             cls:'courtView',
-            margin: 10
+            margin: 25
         });
         return this.callParent(arguments);
     },

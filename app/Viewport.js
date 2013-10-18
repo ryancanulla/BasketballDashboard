@@ -5,7 +5,8 @@ Ext.define("BasketballDashboard.Viewport", {
         'BasketballDashboard.ui.score.Score',
         'BasketballDashboard.ui.time.Time',
         'BasketballDashboard.ui.roster.Roster',
-        'BasketballDashboard.ui.court.Court'
+        'BasketballDashboard.ui.court.Court',
+        'BasketballDashboard.ui.bubble.Bubble'
     ],
 
     homeColors: ['#008853',	'#e9d342',	'#aa4641',	'#dedede',	'#fab587'],
@@ -15,12 +16,10 @@ Ext.define("BasketballDashboard.Viewport", {
         Ext.applyIf(this, {
 
             layout: 'fit',
-            padding: 25,
 
             items: [
                 {
                     xtype: 'panel',
-                    title: 'Game Recap',
 
                     layout: {
                         type: 'vbox',
@@ -29,9 +28,12 @@ Ext.define("BasketballDashboard.Viewport", {
 
                     items: [
                         {
-                            xtype: 'container',
+                            xtype: 'panel',
                             layout: { type: 'hbox', align: 'stretch' },
-                            flex: 2,
+                            title: 'header',
+                            collapsible:true,
+                            collapseDirection:'left',
+                                flex: 1,
                             items: [
                                 {
                                     xtype: 'roster',
@@ -82,15 +84,46 @@ Ext.define("BasketballDashboard.Viewport", {
                             flex: 4,
                             items: [
                                 {
-                                    xtype:'court',
-                                    homeTeam: true,
-                                    flex:1
+                                    xtype: 'container',
+                                    flex:1,
+                                    layout: {
+                                        type: 'vbox',
+                                        align: 'stretch'
+                                    },
+                                    items: [
+                                        {
+                                            xtype:'bubble',
+                                            homeTeam: true,
+                                            flex:1
+                                        },
+                                        {
+                                            xtype:'court',
+                                            homeTeam: true,
+                                            flex:2
+                                        }
+                                    ]
                                 },
                                 {
-                                    xtype:'court',
-                                    homeTeam: false,
-                                    flex:1
+                                    xtype: 'container',
+                                    flex:1,
+                                    layout: {
+                                        type: 'vbox',
+                                        align: 'stretch'
+                                    },
+                                    items: [
+                                        {
+                                            xtype:'bubble',
+                                            homeTeam: true,
+                                            flex:2
+                                        },
+                                        {
+                                            xtype:'court',
+                                            homeTeam: true,
+                                            flex:1
+                                        }
+                                    ]
                                 }
+
 //                                {
 //                                    xtype: 'shooting',
 //                                    team: 'BOS',

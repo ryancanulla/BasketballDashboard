@@ -23,6 +23,9 @@ Ext.ClassManager.addNameAlternateMappings({
   "BasketballDashboard.model.GameEventModel": [],
   "BasketballDashboard.store.GameStore": [],
   "BasketballDashboard.ui.bubble.Bubble": [],
+  "BasketballDashboard.ui.bubble.BubbleController": [],
+  "BasketballDashboard.ui.bubble.BubbleModel": [],
+  "BasketballDashboard.ui.bubble.BubbleService": [],
   "BasketballDashboard.ui.court.Court": [],
   "BasketballDashboard.ui.court.CourtController": [],
   "BasketballDashboard.ui.court.CourtService": [],
@@ -932,8 +935,11 @@ Ext.ClassManager.addNameAliasMappings({
   "BasketballDashboard.model.GameEventModel": [],
   "BasketballDashboard.store.GameStore": [],
   "BasketballDashboard.ui.bubble.Bubble": [
-    "widget.court"
+    "widget.bubble"
   ],
+  "BasketballDashboard.ui.bubble.BubbleController": [],
+  "BasketballDashboard.ui.bubble.BubbleModel": [],
+  "BasketballDashboard.ui.bubble.BubbleService": [],
   "BasketballDashboard.ui.court.Court": [
     "widget.court"
   ],
